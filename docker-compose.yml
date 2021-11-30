@@ -23,7 +23,7 @@ services:
       PYTHONPATH: .
       DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
       ENABLE_SENTRY: 'yes'
-      SECREY_KEY: 'AuroraAdminPanel321'
+      SECREY_KEY: 'AuroraAdminPane2204'
     volumes:
       - app-data:/app/ansible/priv_data_dirs
     depends_on:
@@ -31,10 +31,10 @@ services:
       - redis
 
   nginx:
-    image: leishi1313/aurora-admin-frontend:latest
+    image: dogwalker/jiguang:v0.14.1
     restart: always
     ports:
-      - 8000:80
+      - 8030:80
     depends_on:
       - backend
   
@@ -47,7 +47,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: aurora
-      POSTGRES_PASSWORD: AuroraAdminPanel321
+      POSTGRES_PASSWORD: AuroraAdminPane2204
       POSTGRES_DB: aurora
     volumes:
       - db-data:/var/lib/postgresql/data

@@ -5,7 +5,7 @@ services:
     restart: always
     command: bash worker.sh
     environment:
-      ENABLE_SENTRY: 'no'
+      ENABLE_SENTRY: 'yes'
       DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
       TRAFFIC_INTERVAL_SECONDS: 600
       DDNS_INTERVAL_SECONDS: 120
@@ -22,7 +22,7 @@ services:
     environment:
       PYTHONPATH: .
       DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
-      ENABLE_SENTRY: 'no'
+      ENABLE_SENTRY: 'yes'
       SECREY_KEY: 'AuroraAdminPanel321'
     volumes:
       - app-data:/app/ansible/priv_data_dirs

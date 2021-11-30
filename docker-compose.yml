@@ -23,7 +23,7 @@ services:
       PYTHONPATH: .
       DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
       ENABLE_SENTRY: 'no'
-      SECREY_KEY: 'AuroraAdminPane2204'
+      SECREY_KEY: 'AuroraAdminPanel321'
     volumes:
       - app-data:/app/ansible/priv_data_dirs
     depends_on:
@@ -47,7 +47,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: aurora
-      POSTGRES_PASSWORD: AuroraAdminPane2204
+      POSTGRES_PASSWORD: AuroraAdminPanel321
       POSTGRES_DB: aurora
     volumes:
       - db-data:/var/lib/postgresql/data
